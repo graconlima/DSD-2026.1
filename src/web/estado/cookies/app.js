@@ -2,7 +2,7 @@ async function login() {
     const username = document.getElementById("user").value;
     const password = document.getElementById("pass").value;
 
-    await fetch("http://localhost:3000/login", {
+    await fetch("http://localhost/cookies/login.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -15,7 +15,7 @@ async function login() {
 }
 
 async function getProfile() {
-    const response = await fetch("http://localhost:3000/profile", {
+    const response = await fetch("http://localhost/cookies/profile.php", {
         credentials: "include" // 🔑 cookie vai automaticamente
     });
 
